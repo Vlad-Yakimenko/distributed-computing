@@ -1,3 +1,4 @@
 rootProject.name = 'Labwork_second'
 include 'military-task'
+include 'himalayan-task'
 
