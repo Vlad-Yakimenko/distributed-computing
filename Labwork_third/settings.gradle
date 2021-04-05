@@ -1,0 +1,4 @@
+rootProject.name = 'Labwork_third'
+include 'winnie-pooh-task'
+include 'barber-task'
+
