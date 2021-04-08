@@ -9,8 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/barber-task" />
-            <option value="$PROJECT_DIR$/winnie-pooh-task" />
+            <option value="$PROJECT_DIR$/garden-task" />
+            <option value="$PROJECT_DIR$/readers-writers-task" />
           </set>
         </option>
       </GradleProjectSettings>
