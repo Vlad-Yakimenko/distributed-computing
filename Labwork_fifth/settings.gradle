@@ -1,0 +1,5 @@
+rootProject.name = 'Labwork_fifth'
+include 'recruits-task'
+include 'string-task'
+include 'arrays-task'
+
