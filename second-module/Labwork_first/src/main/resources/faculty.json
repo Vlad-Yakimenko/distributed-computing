@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "course": 3,
+      "name": "ISS-31",
+      "students": [
+        {
+          "firstName": "Vladyslav",
+          "lastName": "Yakymenko"
+        },
+        {
+          "firstName": "Ivan",
+          "lastName": "Krasnoschok"
+        },
+        {
+          "firstName": "Maxim",
+          "lastName": "Kovalchuk"
+        }
+      ]
+    },
+    {
+      "course": 3,
+      "name": "ISS-32",
+      "students": [
+        {
+          "firstName": "Yana",
+          "lastName": "Skyrda"
+        },
+        {
+          "firstName": "Vetalik",
+          "lastName": "Datsiuk"
+        }
+      ]
+    }
+  ]
+}
