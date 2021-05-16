@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+# IntelliJ project files
+.gradle
+.idea/sonarlint
+.idea/dataSources
+.idea/workspace.xml
+build

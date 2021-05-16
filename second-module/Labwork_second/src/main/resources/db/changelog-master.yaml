@@ -1,0 +1,81 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Vlad Yakymenko
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_groups
+                  name: id
+                  type: SERIAL
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: name
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: course
+                  type: int8
+            remarks: Contains groups
+            tableName: groups
+  - changeSet:
+      id: 2
+      author: Vlad Yakymenko
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_students
+                  name: id
+                  type: SERIAL
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: group_id
+                  type: int8
+            remarks: Contains students
+            tableName: students
+  - changeSet:
+      id: 3
+      author: Vlad Yakymenko
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: ISS-31
+              - column:
+                  name: course
+                  value: 3
+            schemaName: public
+            tableName: groups
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: K-29
+              - column:
+                  name: course
+                  value: 2
+            schemaName: public
+            tableName: groups
