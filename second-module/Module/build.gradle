@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath 'org.liquibase:liquibase-gradle-plugin:2.0.4'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.liquibase.gradle' version '2.0.4'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+liquibase {
+    activities {
+        main {
+            changeLogFile 'src/main/resources/db/dbchangelog-master.xml'
+            url 'jdbc:postgresql://localhost:5432/weather'
+            username 'postgres'
+            password 'Tsunami9'
+        }
+    }
+}
+
+dependencies {
+    liquibaseRuntime group: 'org.postgresql', name: 'postgresql', version: '42.2.19'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.19'
+
+    liquibaseRuntime group: 'org.liquibase', name: 'liquibase-core', version: '4.3.1'
+    implementation group: 'org.liquibase', name: 'liquibase-gradle-plugin', version: '2.0.4'
+
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
